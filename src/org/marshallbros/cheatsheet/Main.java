@@ -8,8 +8,6 @@ public class Main extends Canvas {
     private static final int HEIGHT = WIDTH / 12 * 9;
     private static final String title = "Cheat Sheet";
 
-    Thread thread;
-
     public Main() {
 
         new Window(WIDTH, HEIGHT, title, this);
