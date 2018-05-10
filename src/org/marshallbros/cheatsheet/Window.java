@@ -1,4 +1,9 @@
 package org.marshallbros.cheatsheet;
 
-public class Window {
+import java.awt.*;
+
+public class Window extends Canvas {
+    public Window() {
+
+    }
 }
