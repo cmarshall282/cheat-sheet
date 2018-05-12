@@ -20,4 +20,8 @@ public class Algebra {
 
         return new Point(x, y);
     }
+
+    public double changeOfBase(int base, int x) {
+        return Math.log10(x) / Math.log10(base);
+    }
 }
