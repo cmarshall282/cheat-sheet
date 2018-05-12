@@ -3,10 +3,6 @@ package org.marshallbros.cheatsheet;
 import java.awt.*;
 
 public class Algebra {
-    public Algebra() {
-
-    }
-
     public double[] quadraticFormula(double a, double b, double c) {
         double[] answers = new double[2];
 
