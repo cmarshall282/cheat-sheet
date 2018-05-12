@@ -3,12 +3,14 @@ package org.marshallbros.cheatsheet;
 public class Trigonometry {
     public Triangle solveTriangle(Triangle triangle) {
         /*
+
         Theta 1 is opposite side a.
         Theta 2 is opposite side b.
         Side c is the hypotenuse.
 
         -1 is passed in to signify a value to solve for
-         */
+
+        */
 
         if(triangle.theta1 != -1.0) {
             if(triangle.a != -1.00) {
