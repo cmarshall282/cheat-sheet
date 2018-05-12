@@ -23,7 +23,10 @@
                </font>
             </Label>
             <ChoiceBox fx:id="algebraChoice" layoutX="357.0" layoutY="88.0" prefWidth="150.0" />
-            <Button layoutX="274.0" layoutY="136.0" mnemonicParsing="false" text="Button" />
+            <Button fx:id="goButton" layoutX="279.0" layoutY="132.0" mnemonicParsing="false" onAction="#goPressed" text="Go!">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></Button>
          </children>
       </AnchorPane>
    </children>
