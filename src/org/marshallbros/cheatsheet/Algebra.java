@@ -16,12 +16,12 @@ public class Algebra {
         return answers;
     }
 
-    public double[] findQuadraticVertex(double a, double b, double c) {
+    public Point findQuadraticVertex(double a, double b, double c) {
         double[] answer = new double[2];
 
-        answer[0] = (-b) / (2 * a);
-        answer[1] = 0;
+        double x = (-b) / (2 * a);
+        double y = a * x * x + b * x + c;
 
-        return answer;
+        return new Point(x, y);
     }
 }
