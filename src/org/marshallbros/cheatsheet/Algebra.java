@@ -3,10 +3,6 @@ package org.marshallbros.cheatsheet;
 import java.awt.*;
 
 public class Algebra {
-    public Algebra() {
-
-    }
-
     public double[] quadraticFormula(double a, double b, double c) {
         double[] answers = new double[2];
 
@@ -23,5 +19,9 @@ public class Algebra {
         double y = a * x * x + b * x + c;
 
         return new Point(x, y);
+    }
+
+    public double changeOfBase(int base, int x) {
+        return Math.log10(x) / Math.log10(base);
     }
 }

@@ -1,10 +1,24 @@
 package org.marshallbros.cheatsheet;
 
 public class Geometry {
-    public Geometry() {
+    //MISCELLANEOUS
+    public double pythagoreanTheorem(double a, double b, double c) {
+        double answer = -1.0;
 
+        if(a == -1.0) answer = c * c - b * b;
+        else if(b == -1.0) answer = c * c - a * a;
+        else if(c == -1.0) answer = a * a + b * b;
+
+        return answer;
     }
 
+    public String checkTriangleType(double a, double b, double c) {
+        if(a * a + b * b == c * c) return "right";
+        else if(a * a + b * b > c * c) return "acute";
+        else return "obtuse";
+    }
+
+    //SHAPES
     //2D Shapes
     public double regularNGonArea(double numberOfSides, double length) {
         double theta = 360 / (numberOfSides * 2);
@@ -16,6 +30,10 @@ public class Geometry {
 
     public double rectangleArea(double l, double h) {
         return l * h;
+    }
+
+    public double trapezoidArea(double b1, double b2, double h) {
+        return 0.5 * (b1 + b2) * h;
     }
 
     public double triangleArea(double b, double h) {
