@@ -3,7 +3,7 @@ package org.marshallbros.cheatsheet;
 import java.awt.*;
 
 public class Algebra {
-    public double[] quadraticFormula(double a, double b, double c) {
+    public static double[] quadraticFormula(double a, double b, double c) {
         double[] answers = new double[2];
 
         answers[0] = (-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a);
@@ -12,7 +12,7 @@ public class Algebra {
         return answers;
     }
 
-    public Point findQuadraticVertex(double a, double b, double c) {
+    public static Point findQuadraticVertex(double a, double b, double c) {
         double[] answer = new double[2];
 
         double x = (-b) / (2 * a);
@@ -21,7 +21,15 @@ public class Algebra {
         return new Point(x, y);
     }
 
-    public double changeOfBase(int base, int x) {
+    public static double changeOfBase(int base, int x) {
         return Math.log10(x) / Math.log10(base);
+    }
+
+    public static double distanceFormula(Point a, Point b) {
+        double xDiff = Math.abs(a.x - b.x);
+        double yDiff = Math.abs(a.y - b.y);
+
+        return Geometry.pythagoreanTheorem(xDiff, yDiff, -1.0);
+
     }
 }

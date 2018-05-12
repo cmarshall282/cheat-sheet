@@ -1,7 +1,7 @@
 package org.marshallbros.cheatsheet;
 
 public class Trigonometry {
-    public Triangle solveTriangle(Triangle triangle) {
+    public static Triangle solveTriangle(Triangle triangle) {
         /*
 
         Theta 1 is opposite side a.
@@ -45,10 +45,25 @@ public class Trigonometry {
                 triangle.theta1 = 90 - triangle.theta2;
             }
         } else {
-            //To Be Continued
+            if(triangle.a != -1.0 && triangle.b != -1.0) {
+                triangle.c = Geometry.pythagoreanTheorem(triangle.a, triangle.b, -1.0);
+
+                triangle.theta1 = Math.atan2(triangle.a, triangle.b);
+                triangle.theta2 = 90 - triangle.theta1;
+            } else if(triangle.a != -1.0 && triangle.c != -1.0) {
+                triangle.b = Geometry.pythagoreanTheorem(triangle.a, -1.0, triangle.c);
+
+                triangle.theta1 = Math.atan2(triangle.a, triangle.b);
+                triangle.theta2 = 90 - triangle.theta1;
+            } else if(triangle.b != -1.0 && triangle.c != -1.0) {
+                triangle.a = Geometry.pythagoreanTheorem(-1.0, triangle.b, triangle.c);
+
+                triangle.theta1 = Math.atan2(triangle.a, triangle.b);
+                triangle.theta2 = 90 - triangle.theta1;
+            }
         }
 
-        //Return error code
+        //Return Solved Triangle
         return triangle;
     }
 }
