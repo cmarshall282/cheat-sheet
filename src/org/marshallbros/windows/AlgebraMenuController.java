@@ -27,15 +27,13 @@ public class AlgebraMenuController {
     }
 
     public void goPressed(ActionEvent event) throws IOException {
-        Object input = algebraChoice.getValue();
-        String choice = (String)input;
+        String choice = (String)algebraChoice.getValue();
         String selectedFile = getSceneName(choice);
 
         new SceneSwitcher(selectedFile, event);
     }
 
     private String getSceneName(String input) {
-
         if(input.equals("Quadratic Formula")) return "QuadraticFormula.fxml";
         if(input.equals("Find Vertex")) return "VertexMenu.fxml";
         if(input.equals("Distance Formula")) return "DistanceFormula.fxml";
