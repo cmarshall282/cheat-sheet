@@ -1,4 +1,4 @@
-package org.marshallbros.windows;
+package org.marshallbros.windows.algebra;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.LoadException;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import org.marshallbros.windows.SceneSwitcher;
 
 import java.io.IOException;
 
@@ -34,9 +35,9 @@ public class AlgebraMenuController {
     }
 
     private String getSceneName(String input) {
-        if(input.equals("Quadratic Formula")) return "QuadraticFormula.fxml";
-        if(input.equals("Find Vertex")) return "VertexMenu.fxml";
-        if(input.equals("Distance Formula")) return "DistanceFormula.fxml";
+        if(input.equals("Quadratic Formula")) return "algebra/QuadraticFormula.fxml";
+        if(input.equals("Find Vertex")) return "algebra/VertexMenu.fxml";
+        if(input.equals("Distance Formula")) return "algebra/DistanceFormula.fxml";
         return "No Choice Selected";
     }
 }

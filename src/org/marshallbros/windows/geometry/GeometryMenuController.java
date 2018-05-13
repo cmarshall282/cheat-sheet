@@ -1,4 +1,4 @@
-package org.marshallbros.windows;
+package org.marshallbros.windows.geometry;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import org.marshallbros.windows.SceneSwitcher;
 
 import java.io.IOException;
 
@@ -40,9 +41,9 @@ public class GeometryMenuController {
     }
 
     public String getSceneName(String input) {
-        if(input.equals("3D Shapes")) return "Shapes3D.fxml";
-        if(input.equals("2D Shapes")) return "Shapes2D.fxml";
-        if(input.equals("Miscellaneous")) return "MiscGeometry.fxml";
+        if(input.equals("3D Shapes")) return "geometry/Shapes3D.fxml";
+        if(input.equals("2D Shapes")) return "geometry/Shapes2D.fxml";
+        if(input.equals("Miscellaneous")) return "geometry/MiscGeometry.fxml";
         return "No Choice Selected";
     }
 }

@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class SelectorMenuController {
     public void algebraPressed(ActionEvent event) throws IOException {
-        Parent algebraMenuParent = FXMLLoader.load(getClass().getResource("AlgebraMenu.fxml"));
+        Parent algebraMenuParent = FXMLLoader.load(getClass().getResource("algebra/AlgebraMenu.fxml"));
 
         Scene algebraMenuScene = new Scene(algebraMenuParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -20,7 +20,7 @@ public class SelectorMenuController {
     }
 
     public void geometryPressed(ActionEvent event) throws IOException {
-        Parent geometryMenuParent = FXMLLoader.load(getClass().getResource("GeometryMenu.fxml"));
+        Parent geometryMenuParent = FXMLLoader.load(getClass().getResource("geometry/GeometryMenu.fxml"));
 
         Scene geometryMenuScene = new Scene(geometryMenuParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -29,7 +29,7 @@ public class SelectorMenuController {
     }
 
     public void trigPressed(ActionEvent event) throws IOException {
-        Parent trigMenuParent = FXMLLoader.load(getClass().getResource("TrigMenu.fxml"));
+        Parent trigMenuParent = FXMLLoader.load(getClass().getResource("trig/TrigMenu.fxml"));
 
         Scene trigMenuScene = new Scene(trigMenuParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();

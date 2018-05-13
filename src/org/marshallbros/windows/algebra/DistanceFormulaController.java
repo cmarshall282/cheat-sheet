@@ -1,4 +1,4 @@
-package org.marshallbros.windows;
+package org.marshallbros.windows.algebra;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import org.marshallbros.cheatsheet.Algebra;
 import org.marshallbros.cheatsheet.Point;
+import org.marshallbros.windows.SceneSwitcher;
 
 public class DistanceFormulaController {
     @FXML
@@ -50,7 +51,7 @@ public class DistanceFormulaController {
     }
 
     public void backButtonPressed(ActionEvent event) throws IOException {
-        new SceneSwitcher("AlgebraMenu.fxml", event);
+        new SceneSwitcher("algebra/AlgebraMenu.fxml", event);
 
     }
 

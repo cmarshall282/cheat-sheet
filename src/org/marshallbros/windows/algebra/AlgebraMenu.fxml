@@ -8,11 +8,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.marshallbros.windows.AlgebraMenuController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.marshallbros.windows.algebra.AlgebraMenuController">
    <children>
       <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true">
          <image>
-            <Image url="@../resources/video-background-1288-an-abstract-maze-of-formula-algebra-and-computer-code-loop_nymelycf__F0001.png" />
+            <Image url="@../../resources/video-background-1288-an-abstract-maze-of-formula-algebra-and-computer-code-loop_nymelycf__F0001.png" />
          </image>
       </ImageView>
       <AnchorPane layoutX="100.0" layoutY="39.0" prefHeight="200.0" prefWidth="600.0" style="-fx-background-color: #34495E;">

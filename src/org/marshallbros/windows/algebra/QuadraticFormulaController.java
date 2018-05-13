@@ -1,10 +1,11 @@
-package org.marshallbros.windows;
+package org.marshallbros.windows.algebra;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import org.marshallbros.cheatsheet.Algebra;
+import org.marshallbros.windows.SceneSwitcher;
 
 import javax.swing.*;
 import java.io.IOException;
@@ -41,7 +42,7 @@ public class QuadraticFormulaController {
     }
 
     public void backButtonPressed(ActionEvent event) throws IOException {
-        new SceneSwitcher("AlgebraMenu.fxml", event);
+        new SceneSwitcher("algebra/AlgebraMenu.fxml", event);
     }
 
     private double parseData(String data, String field) {

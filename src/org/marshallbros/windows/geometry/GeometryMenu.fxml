@@ -9,11 +9,11 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.marshallbros.windows.GeometryMenuController">
+<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.marshallbros.windows.geometry.GeometryMenuController">
    <children>
       <ImageView fitHeight="400.0" fitWidth="800.0" pickOnBounds="true">
          <image>
-            <Image url="@../resources/geometryimg.jpg" />
+            <Image url="@../../resources/geometryimg.jpg" />
          </image>
       </ImageView>
       <AnchorPane layoutX="190.0" layoutY="50.0" prefHeight="220.0" prefWidth="420.0" style="-fx-background-color: #640DA9;">
@@ -25,10 +25,19 @@
                         <Font name="Arial" size="18.0" />
                      </font>
                   </Label>
-                  <ChoiceBox prefWidth="150.0" />
-                  <Button mnemonicParsing="false" text="Go!" />
+                  <ChoiceBox fx:id="geometryChoice" onDragDetected="#initialize" prefWidth="150.0" />
+                  <Button fx:id="goButton" mnemonicParsing="false" onAction="#goButtonPressed" text="Go!" />
                </children>
             </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="315.0" layoutY="260.0" prefHeight="70.0" prefWidth="170.0" style="-fx-background-color: #640DA9;">
+         <children>
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#backButtonPressed" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #8736C3;" text="Back" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </children>
