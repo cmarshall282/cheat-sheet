@@ -13,16 +13,10 @@ public class Algebra {
     }
 
     public static Point findQuadraticVertex(double a, double b, double c) {
-        double[] answer = new double[2];
-
         double x = (-b) / (2 * a);
         double y = a * x * x + b * x + c;
 
         return new Point(x, y);
-    }
-
-    public static double changeOfBase(int base, int x) {
-        return Math.log10(x) / Math.log10(base);
     }
 
     public static double distanceFormula(Point a, Point b) {

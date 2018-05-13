@@ -4,15 +4,16 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
 import javax.swing.*;
-import java.awt.*;
 import java.io.IOException;
 
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import org.marshallbros.cheatsheet.Algebra;
 import org.marshallbros.cheatsheet.Point;
 
 public class DistanceFormulaController {
     @FXML
-    TextField firstX;
+    private TextField firstX;
 
     @FXML
     TextField firstY;

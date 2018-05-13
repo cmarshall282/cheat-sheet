@@ -5,10 +5,13 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import org.marshallbros.cheatsheet.Algebra;
+import org.marshallbros.cheatsheet.Point;
 
 import javax.swing.*;
+import java.io.IOException;
 
-public class QuadraticFormulaController {
+public class VertexMenuController {
+
     @FXML
     TextField aField;
 
@@ -21,6 +24,9 @@ public class QuadraticFormulaController {
     @FXML
     Button goButton;
 
+    @FXML
+    Button backButton;
+
     public void goButtonPressed(ActionEvent event) {
         String aString = aField.getText();
         String bString = bField.getText();
@@ -30,13 +36,12 @@ public class QuadraticFormulaController {
         double b = parseData(bString, "b");
         double c = parseData(cString, "c");
 
-        double[] answers = Algebra.quadraticFormula(a, b, c);
-        String output = answers[0] + " and " + answers[1];
-
-        JOptionPane.showMessageDialog(null, "Your roots are: " + output);
+        Point vertex = Algebra.findQuadraticVertex(a, b, c);
+        JOptionPane.showMessageDialog(null, "Your vertex is: (" + vertex.x + ", " + vertex.y + ")");
     }
 
-    public void backButtonPressed(ActionEvent event) {
+    public void backButtonPressed(ActionEvent event) throws IOException {
+        new SceneSwitcher("AlgebraMenu.fxml", event);
     }
 
     private double parseData(String data, String field) {
@@ -45,8 +50,8 @@ public class QuadraticFormulaController {
             try {
                 i = Double.parseDouble(data);
                 break;
-            } catch(NumberFormatException e) {
-                data = JOptionPane.showInputDialog("Please enter a valid number for " + field + ": ");
+            } catch (NumberFormatException e) {
+                data = JOptionPane.showInputDialog("Enter a valid number for " + field + ":");
             }
         }
         return i;

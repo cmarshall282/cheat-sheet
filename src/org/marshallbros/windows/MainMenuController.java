@@ -11,12 +11,7 @@ import java.io.IOException;
 
 public class MainMenuController {
     public void startPressed(ActionEvent event) throws IOException {
-        Parent selectorMenuParent = FXMLLoader.load(getClass().getResource("SelectorMenu.fxml"));
-
-        Scene SelectorMenuScene = new Scene(selectorMenuParent);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(SelectorMenuScene);
-        window.show();
+        new SceneSwitcher("SelectorMenu.fxml", event);
     }
 
     public void quitPressed(ActionEvent event) {
