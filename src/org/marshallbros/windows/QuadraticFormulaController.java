@@ -7,6 +7,7 @@ import javafx.scene.control.TextField;
 import org.marshallbros.cheatsheet.Algebra;
 
 import javax.swing.*;
+import java.io.IOException;
 
 public class QuadraticFormulaController {
     @FXML
@@ -20,6 +21,9 @@ public class QuadraticFormulaController {
 
     @FXML
     Button goButton;
+
+    @FXML
+    Button backButton;
 
     public void goButtonPressed(ActionEvent event) {
         String aString = aField.getText();
@@ -36,7 +40,8 @@ public class QuadraticFormulaController {
         JOptionPane.showMessageDialog(null, "Your roots are: " + output);
     }
 
-    public void backButtonPressed(ActionEvent event) {
+    public void backButtonPressed(ActionEvent event) throws IOException {
+        new SceneSwitcher("AlgebraMenu.fxml", event);
     }
 
     private double parseData(String data, String field) {
