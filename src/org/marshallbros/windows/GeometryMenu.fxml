@@ -1,14 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="org.marshallbros.windows.GeometryMenuController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.marshallbros.windows.GeometryMenuController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="800.0" pickOnBounds="true">
+         <image>
+            <Image url="@../resources/geometryimg.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="190.0" layoutY="50.0" prefHeight="220.0" prefWidth="420.0" style="-fx-background-color: #640DA9;">
+         <children>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="400.0" spacing="3.0" style="-fx-background-color: #5868D7;">
+               <children>
+                  <Label text="Select your Categoory: " textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox prefWidth="150.0" />
+                  <Button mnemonicParsing="false" text="Go!" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
 </AnchorPane>
