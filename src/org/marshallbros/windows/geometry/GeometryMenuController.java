@@ -37,7 +37,7 @@ public class GeometryMenuController {
     }
 
     public void backButtonPressed(ActionEvent event) throws IOException {
-        new SceneSwitcher("MainMenu.fxml", event);
+        new SceneSwitcher("SelectorMenu.fxml", event);
     }
 
     public String getSceneName(String input) {
