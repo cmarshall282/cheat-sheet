@@ -20,16 +20,23 @@ public class GeometryMenuController {
     Button goButton;
 
     @FXML
+    Button backButton;
+
+    @FXML
     public void initialize() {
         geometryChoice.setItems(geometryChoiceList);
         geometryChoice.setValue("None");
     }
 
-    public void goPressed(ActionEvent event) throws IOException {
+    public void goButtonPressed(ActionEvent event) throws IOException {
         String choice = (String)geometryChoice.getValue();
         String selectedFile = getSceneName(choice);
 
         new SceneSwitcher(selectedFile, event);
+    }
+
+    public void backButtonPressed(ActionEvent event) throws IOException {
+        new SceneSwitcher("MainMenu.fxml", event);
     }
 
     public String getSceneName(String input) {
